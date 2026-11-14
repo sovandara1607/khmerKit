@@ -16,3 +16,17 @@ Package code is in `src/khmerkit/`, tests are in `tests/`, and the synthetic eva
 The real starter corpus is in `data/real/`. Its 20 query candidates are marked `needs_human_review` and are excluded from benchmark scores until two independent labels and an adjudicated `relevant` field are added.
 
 An assistant-drafted 20-query smoke test is available at `data/real/queries.assistant-draft.jsonl`. Its benchmark output is `data/real/benchmark-results.assistant-draft.json`. Treat those numbers as pipeline diagnostics until human review is complete.
+
+## Use KhmerKit from Python
+
+```python
+from khmerkit.search import SearchIndex
+
+index = SearchIndex([
+    ("doc-1", "អត្ថបទជាភាសាខ្មែរ"),
+    ("doc-2", "English and Khmer text"),
+])
+results = index.search("ស្វែងរកអត្ថបទ", k=3)
+```
+
+The default backend is normalized character TF-IDF. Use `SearchIndex(documents, backend="exact")` when you need the transparent token-overlap baseline.

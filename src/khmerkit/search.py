@@ -1,7 +1,7 @@
 """Two intentionally small retrieval baselines for the feasibility experiment."""
 
 from dataclasses import dataclass
-from typing import Iterable, Sequence
+from typing import Iterable, Literal, Sequence
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -84,3 +84,26 @@ class CharNgramSearch:
             key=lambda item: (-item.score, item.doc_id),
         )
         return ranked[:k]
+
+
+class SearchIndex:
+    """Stable application-facing wrapper around KhmerKit retrieval backends."""
+
+    def __init__(
+        self,
+        documents: Sequence[tuple[str, str]],
+        *,
+        backend: Literal["char_tfidf", "exact"] = "char_tfidf",
+        normalize: bool = True,
+    ):
+        if backend == "char_tfidf":
+            self._searcher = CharNgramSearch(documents, normalize=normalize)
+        elif backend == "exact":
+            self._searcher = ExactSearch(documents, normalize=normalize)
+        else:
+            raise ValueError(f"unsupported search backend: {backend}")
+
+    def search(self, query: str, *, k: int = 3) -> list[SearchResult]:
+        """Return the highest-scoring documents for a query."""
+
+        return self._searcher.search(query, k=k)

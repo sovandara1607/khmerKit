@@ -2,7 +2,7 @@
 
 from .normalize import NormalizationResult, normalize_text
 from .provenance import ProvenanceRecord, load_provenance
-from .search import CharNgramSearch, ExactSearch, SearchResult
+from .search import CharNgramSearch, ExactSearch, SearchIndex, SearchResult
 
 __all__ = [
     "CharNgramSearch",
@@ -10,6 +10,7 @@ __all__ = [
     "NormalizationResult",
     "ProvenanceRecord",
     "SearchResult",
+    "SearchIndex",
     "load_provenance",
     "normalize_text",
 ]

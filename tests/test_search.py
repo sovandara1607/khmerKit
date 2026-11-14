@@ -1,5 +1,5 @@
 from khmerkit.evaluate import QueryCase, evaluate
-from khmerkit.search import CharNgramSearch, ExactSearch
+from khmerkit.search import CharNgramSearch, ExactSearch, SearchIndex
 
 
 DOCS = [
@@ -24,3 +24,8 @@ def test_evaluation_reports_hit_rate_and_mrr():
     report = evaluate(cases, ExactSearch(DOCS, normalize=True))
     assert report.hit_rate_at_3 == 1.0
     assert report.mean_reciprocal_rank == 1.0
+
+
+def test_search_index_defaults_to_normalized_character_retrieval():
+    results = SearchIndex(DOCS).search("library", k=1)
+    assert results[0].doc_id == "c"

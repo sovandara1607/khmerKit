@@ -39,9 +39,13 @@ def load_dataset(
         raise ValueError(
             f"no documents found in {path} or its sibling documents.jsonl"
         )
-    queries = [
-        QueryCase(row["id"], row["text"], frozenset(row["relevant"]))
-        for row in rows
-        if row["type"] == "query"
-    ]
+    queries = []
+    seen_query_ids = set()
+    for row in rows:
+        if row["type"] != "query":
+            continue
+        if row["id"] in seen_query_ids:
+            raise ValueError(f"duplicate query id: {row['id']}")
+        seen_query_ids.add(row["id"])
+        queries.append(QueryCase(row["id"], row["text"], frozenset(row["relevant"])))
     return documents, queries

@@ -9,7 +9,7 @@ def test_query_only_file_infers_sibling_documents():
         documents_path=Path("data/real/documents.jsonl"),
     )
     assert len(documents) == 20
-    assert len(queries) == 1
+    assert len(queries) == 20
     assert queries[0].relevant == frozenset({"wiki-1784"})
 
 
