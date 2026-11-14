@@ -9,6 +9,8 @@ This repository keeps the package, tests, data, and research notes at the projec
 .venv/bin/khmerkit-validate-provenance data/provenance.csv
 ```
 
+For reviewed queries stored separately from the corpus, run `khmerkit-benchmark --dataset data/real/queries.reviewed.jsonl --documents data/real/documents.jsonl --output data/real/benchmark-results.json`. The CLI also infers a sibling `documents.jsonl` file when `--documents` is omitted.
+
 Package code is in `src/khmerkit/`, tests are in `tests/`, and the synthetic evaluation set is in `data/`.
 
 The real starter corpus is in `data/real/`. Its 20 query candidates are marked `needs_human_review` and are excluded from benchmark scores until two independent labels and an adjudicated `relevant` field are added.

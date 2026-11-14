@@ -1,0 +1,62 @@
+{
+  "exact_raw": {
+    "hit_rate_at_3": 0.0,
+    "mean_reciprocal_rank": 0.0,
+    "per_query": {
+      "q-wiki-1784": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  "exact_normalized": {
+    "hit_rate_at_3": 0.0,
+    "mean_reciprocal_rank": 0.0,
+    "per_query": {
+      "q-wiki-1784": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  "char_tfidf_normalized": {
+    "hit_rate_at_3": 1.0,
+    "mean_reciprocal_rank": 1.0,
+    "per_query": {
+      "q-wiki-1784": [
+        {
+          "doc_id": "wiki-1784",
+          "score": 0.15970781974082743
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.12966718029708316
+        },
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.08630533404449359
+        }
+      ]
+    }
+  }
+}

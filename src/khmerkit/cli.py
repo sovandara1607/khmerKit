@@ -12,10 +12,15 @@ from .search import CharNgramSearch, ExactSearch
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run KhmerKit retrieval baselines")
     parser.add_argument("--dataset", type=Path, default=Path("data/search_eval.synthetic.jsonl"))
+    parser.add_argument(
+        "--documents",
+        type=Path,
+        help="JSONL document file when --dataset contains queries only",
+    )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
-    documents, cases = load_dataset(args.dataset)
+    documents, cases = load_dataset(args.dataset, documents_path=args.documents)
     systems = {
         "exact_raw": ExactSearch(documents, normalize=False),
         "exact_normalized": ExactSearch(documents, normalize=True),

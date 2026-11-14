@@ -15,3 +15,5 @@ After review, create `queries.reviewed.jsonl` using the normal evaluator format:
 ```json
 {"type":"query","id":"q-wiki-1784","text":"រាជធានីរបស់កម្ពុជា","relevant":["wiki-1784"],"annotators":["a1","a2"],"adjudicated":true}
 ```
+
+Keep one JSON object on each line. Run the benchmark with `--documents data/real/documents.jsonl`, or place the reviewed query file beside `documents.jsonl` and let the CLI infer it.
