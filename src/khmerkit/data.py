@@ -24,6 +24,7 @@ def load_dataset(
     path: Path,
     *,
     documents_path: Path | None = None,
+    adjudicated_only: bool = False,
 ) -> tuple[list[tuple[str, str]], list[QueryCase]]:
     rows = _read_rows(path)
     documents = [(row["id"], row["text"]) for row in rows if row["type"] == "document"]
@@ -44,10 +45,14 @@ def load_dataset(
     for row in rows:
         if row["type"] != "query":
             continue
+        if adjudicated_only and row.get("adjudicated") is not True:
+            continue
         if row["id"] in seen_query_ids:
             raise ValueError(f"duplicate query id: {row['id']}")
         seen_query_ids.add(row["id"])
         queries.append(QueryCase(row["id"], row["text"], frozenset(row["relevant"])))
+    if not queries:
+        raise ValueError(f"no eligible queries found in {path}")
     return documents, queries
 
 

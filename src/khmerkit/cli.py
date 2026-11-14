@@ -17,10 +17,19 @@ def main() -> None:
         type=Path,
         help="JSONL document file when --dataset contains queries only",
     )
+    parser.add_argument(
+        "--adjudicated-only",
+        action="store_true",
+        help="score only query rows with adjudicated=true",
+    )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
-    documents, cases = load_dataset(args.dataset, documents_path=args.documents)
+    documents, cases = load_dataset(
+        args.dataset,
+        documents_path=args.documents,
+        adjudicated_only=args.adjudicated_only,
+    )
     systems = {
         "exact_raw": ExactSearch(documents, normalize=False),
         "exact_normalized": ExactSearch(documents, normalize=True),

@@ -19,3 +19,5 @@ After review, create `queries.reviewed.jsonl` using the normal evaluator format:
 ```
 
 Keep one JSON object on each line. Run the benchmark with `--documents data/real/documents.jsonl`, or place the reviewed query file beside `documents.jsonl` and let the CLI infer it.
+
+Use `--adjudicated-only` for the publishable score. This excludes rows that still have `adjudicated: false`.

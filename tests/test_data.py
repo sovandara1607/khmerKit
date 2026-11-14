@@ -26,3 +26,13 @@ def test_assistant_draft_queries_cover_the_starter_corpus():
 def test_load_documents_reads_real_corpus():
     documents = load_documents(Path("data/real/documents.jsonl"))
     assert len(documents) == 20
+
+
+def test_adjudicated_only_filters_assistant_drafts():
+    _, queries = load_dataset(
+        Path("data/real/queries.reviewed.jsonl"),
+        documents_path=Path("data/real/documents.jsonl"),
+        adjudicated_only=True,
+    )
+    assert len(queries) == 1
+    assert queries[0].query_id == "q-wiki-1784"
