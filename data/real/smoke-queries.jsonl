@@ -1,0 +1,10 @@
+{"id": "smoke-001", "text": "រាជធានីកម្ពុជា", "expected": "wiki-1784"}
+{"id": "smoke-002", "text": "ខេត្តនៅកម្ពុជា", "expected": "wiki-19591"}
+{"id": "smoke-003", "text": "សមាជិករដ្ឋសភា", "expected": "wiki-21749"}
+{"id": "smoke-004", "text": "ការអប់រំនៅកម្ពុជា", "expected": "wiki-19359"}
+{"id": "smoke-005", "text": "សាកលវិទ្យាល័យភូមិន្ទ", "expected": "wiki-4296"}
+{"id": "smoke-006", "text": "ទន្លេនៅប្រទេសកម្ពុជា", "expected": "wiki-10690"}
+{"id": "smoke-007", "text": "បច្ចេកវិទ្យា", "expected": "wiki-2377"}
+{"id": "smoke-008", "text": "អាកាសយានដ្ឋានភ្នំពេញ", "expected": "wiki-3693"}
+{"id": "smoke-009", "text": "វប្បធម៌ខ្មែរ", "expected": "wiki-47458"}
+{"id": "smoke-010", "text": "ប្រវត្តិសាស្ត្រខ្មែរ", "expected": "wiki-10073"}

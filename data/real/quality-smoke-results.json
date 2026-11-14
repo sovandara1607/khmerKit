@@ -1,0 +1,116 @@
+{
+  "query_count": 10,
+  "hit_rate_at_3": 0.9,
+  "results": [
+    {
+      "id": "smoke-001",
+      "query": "រាជធានីកម្ពុជា",
+      "expected": "wiki-1784",
+      "top3": [
+        "wiki-1784",
+        "wiki-1770",
+        "wiki-21625"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-002",
+      "query": "ខេត្តនៅកម្ពុជា",
+      "expected": "wiki-19591",
+      "top3": [
+        "wiki-19591",
+        "wiki-21625",
+        "wiki-19359"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-003",
+      "query": "សមាជិករដ្ឋសភា",
+      "expected": "wiki-21749",
+      "top3": [
+        "wiki-21749",
+        "wiki-21625",
+        "wiki-1770"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-004",
+      "query": "ការអប់រំនៅកម្ពុជា",
+      "expected": "wiki-19359",
+      "top3": [
+        "wiki-19359",
+        "wiki-2393",
+        "wiki-12953"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-005",
+      "query": "សាកលវិទ្យាល័យភូមិន្ទ",
+      "expected": "wiki-4296",
+      "top3": [
+        "wiki-4296",
+        "wiki-2393",
+        "wiki-4297"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-006",
+      "query": "ទន្លេនៅប្រទេសកម្ពុជា",
+      "expected": "wiki-10690",
+      "top3": [
+        "wiki-10690",
+        "wiki-21625",
+        "wiki-1770"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-007",
+      "query": "បច្ចេកវិទ្យា",
+      "expected": "wiki-2377",
+      "top3": [
+        "wiki-2377",
+        "wiki-19223",
+        "wiki-4297"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-008",
+      "query": "អាកាសយានដ្ឋានភ្នំពេញ",
+      "expected": "wiki-3693",
+      "top3": [
+        "wiki-3693",
+        "wiki-1784",
+        "wiki-19591"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-009",
+      "query": "វប្បធម៌ខ្មែរ",
+      "expected": "wiki-47458",
+      "top3": [
+        "wiki-34722",
+        "wiki-47458",
+        "wiki-2356"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-010",
+      "query": "ប្រវត្តិសាស្ត្រខ្មែរ",
+      "expected": "wiki-10073",
+      "top3": [
+        "wiki-2356",
+        "wiki-3009",
+        "wiki-47458"
+      ],
+      "hit_at_3": false
+    }
+  ]
+}
