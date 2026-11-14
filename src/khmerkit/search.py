@@ -1,6 +1,7 @@
 """Two intentionally small retrieval baselines for the feasibility experiment."""
 
 from dataclasses import dataclass
+from collections.abc import Callable
 from typing import Iterable, Literal, Sequence
 
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -86,6 +87,48 @@ class CharNgramSearch:
         return ranked[:k]
 
 
+class SegmentedSearch:
+    """Word-token TF-IDF retrieval using a caller-supplied segmenter."""
+
+    def __init__(
+        self,
+        documents: Sequence[tuple[str, str]],
+        *,
+        segmenter: Callable[[str], Iterable[str] | str],
+        normalize: bool = True,
+    ):
+        self._documents = list(documents)
+        self._segmenter = segmenter
+        self._normalize = normalize
+        self._texts = [self._prepare(text) for _, text in self._documents]
+        self._vectorizer = TfidfVectorizer(
+            analyzer="word",
+            token_pattern=r"(?u)\S+",
+            lowercase=False,
+            norm="l2",
+        )
+        self._matrix = self._vectorizer.fit_transform(self._texts)
+
+    def _prepare(self, text: str) -> str:
+        source = normalize_text(text).text if self._normalize else text
+        segmented = self._segmenter(source)
+        if isinstance(segmented, str):
+            return segmented
+        return " ".join(segmented)
+
+    def search(self, query: str, *, k: int = 3) -> list[SearchResult]:
+        query_vector = self._vectorizer.transform([self._prepare(query)])
+        scores = (self._matrix @ query_vector.T).toarray().ravel()
+        ranked = sorted(
+            (
+                SearchResult(doc_id, float(score))
+                for (doc_id, _), score in zip(self._documents, scores)
+            ),
+            key=lambda item: (-item.score, item.doc_id),
+        )
+        return ranked[:k]
+
+
 class SearchIndex:
     """Stable application-facing wrapper around KhmerKit retrieval backends."""
 
@@ -93,13 +136,22 @@ class SearchIndex:
         self,
         documents: Sequence[tuple[str, str]],
         *,
-        backend: Literal["char_tfidf", "exact"] = "char_tfidf",
+        backend: Literal["char_tfidf", "exact", "segmented_tfidf"] = "char_tfidf",
         normalize: bool = True,
+        segmenter: Callable[[str], Iterable[str] | str] | None = None,
     ):
         if backend == "char_tfidf":
             self._searcher = CharNgramSearch(documents, normalize=normalize)
         elif backend == "exact":
             self._searcher = ExactSearch(documents, normalize=normalize)
+        elif backend == "segmented_tfidf":
+            if segmenter is None:
+                raise ValueError("segmenter is required for segmented_tfidf")
+            self._searcher = SegmentedSearch(
+                documents,
+                segmenter=segmenter,
+                normalize=normalize,
+            )
         else:
             raise ValueError(f"unsupported search backend: {backend}")
 

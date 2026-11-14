@@ -25,3 +25,5 @@ After review, create `queries.reviewed.jsonl` using the normal evaluator format:
 Keep one JSON object on each line. Run the benchmark with `--documents data/real/documents.jsonl`, or place the reviewed query file beside `documents.jsonl` and let the CLI infer it.
 
 Use `--adjudicated-only` for the publishable score. This excludes rows that still have `adjudicated: false`.
+
+The optional segmenter comparison uses `khmer-segmenter==0.1.0` in the local environment. Its package metadata did not declare a license, so the adapter remains experimental and is not part of the install extras.

@@ -28,3 +28,5 @@ The current `queries.reviewed.jsonl` run covers 20 unique rows and reports Hit R
 The adjudicated-only report is `data/real/benchmark-results.adjudicated.json`. It currently contains one query and reports Hit Rate@3 1.000 for normalized character TF-IDF and 0.000 for both exact baselines. More adjudicated queries are required before comparing systems.
 
 The assistant-reviewed smoke report is `data/real/benchmark-results.assistant-reviewed.json`. It covers 20 rows and reports Hit Rate@3 0.950 for normalized character TF-IDF and 0.150 for both exact baselines. These rows remain unadjudicated.
+
+The optional segmented TF-IDF experiment is `data/real/benchmark-results.segmented-assistant-reviewed.json`. With `khmer-segmenter==0.1.0`, it also reports Hit Rate@3 0.950 and MRR 0.900 on the same 20 assistant-reviewed rows. This does not justify adding the package to the core dependencies because its PyPI metadata did not declare a license during the experiment.

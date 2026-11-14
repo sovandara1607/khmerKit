@@ -35,6 +35,10 @@ results = index.search("ស្វែងរកអត្ថបទ", k=3)
 
 The default backend is normalized character TF-IDF. Use `SearchIndex(documents, backend="exact")` when you need the transparent token-overlap baseline.
 
+`SegmentedSearch` and `SearchIndex(..., backend="segmented_tfidf", segmenter=...)` accept a caller-supplied segmenter. The optional `khmer-segmenter` adapter is kept outside the core dependencies until its package license is confirmed.
+
+The local segmenter comparison used `khmer-segmenter==0.1.0` and produced the same 0.950 Hit Rate@3 as character TF-IDF. Its report is `data/real/benchmark-results.segmented-assistant-reviewed.json`.
+
 ## Try local search
 
 ```bash

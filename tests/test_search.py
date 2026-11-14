@@ -1,5 +1,5 @@
 from khmerkit.evaluate import QueryCase, evaluate
-from khmerkit.search import CharNgramSearch, ExactSearch, SearchIndex
+from khmerkit.search import CharNgramSearch, ExactSearch, SearchIndex, SegmentedSearch
 
 
 DOCS = [
@@ -29,3 +29,13 @@ def test_evaluation_reports_hit_rate_and_mrr():
 def test_search_index_defaults_to_normalized_character_retrieval():
     results = SearchIndex(DOCS).search("library", k=1)
     assert results[0].doc_id == "c"
+
+
+def test_segmented_search_accepts_a_caller_supplied_segmenter():
+    docs = [("a", "ខ្មែរ សាលា"), ("b", "បណ្ណាល័យ")]
+
+    def segmenter(text):
+        return text.split()
+
+    results = SegmentedSearch(docs, segmenter=segmenter).search("បណ្ណាល័យ", k=1)
+    assert results[0].doc_id == "b"
