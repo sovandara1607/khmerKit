@@ -16,13 +16,23 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<10"]
+dev = [
+  "pytest>=8,<10",
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "uvicorn>=0.30,<1",
+]
+api = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+]
 
 [project.scripts]
 khmerkit-benchmark = "khmerkit.cli:main"
 khmerkit-validate-provenance = "khmerkit.provenance:main"
 khmerkit-search = "khmerkit.search_cli:main"
 khmerkit-quality-smoke = "khmerkit.quality_smoke:main"
+khmerkit-api = "khmerkit.api:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

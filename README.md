@@ -45,4 +45,19 @@ khmerkit-search \
 
 Omit `--query` to enter multiple queries interactively. Each result is emitted as one JSON object with a document ID and score.
 
+## Run the local API
+
+```bash
+khmerkit-api --documents data/real/documents.jsonl --port 8000
+```
+
+Check the service:
+
+```bash
+curl http://127.0.0.1:8000/health
+curl -X POST http://127.0.0.1:8000/search \
+  -H 'content-type: application/json' \
+  -d '{"query":"រាជធានីរបស់កម្ពុជា","k":3}'
+```
+
 The current local smoke test retrieves an acceptable document for all 40 drafted queries in the top three. See [`docs/quality-smoke.md`](docs/quality-smoke.md) for the diagnostic scope.
