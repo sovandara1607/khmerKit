@@ -26,3 +26,5 @@ An assistant-drafted smoke test over all 20 excerpts produced Hit Rate@3 0.950 f
 The current `queries.reviewed.jsonl` run covers 20 unique rows and reports Hit Rate@3 0.950 for normalized character TF-IDF, 0.150 for both exact baselines, and MRR values of 0.900, 0.092, and 0.092. One row is adjudicated and 19 rows retain the assistant-draft status, so this remains a preliminary evaluation.
 
 The adjudicated-only report is `data/real/benchmark-results.adjudicated.json`. It currently contains one query and reports Hit Rate@3 1.000 for normalized character TF-IDF and 0.000 for both exact baselines. More adjudicated queries are required before comparing systems.
+
+The assistant-reviewed smoke report is `data/real/benchmark-results.assistant-reviewed.json`. It covers 20 rows and reports Hit Rate@3 0.950 for normalized character TF-IDF and 0.150 for both exact baselines. These rows remain unadjudicated.

@@ -1,20 +1,20 @@
 query_id,query,proposed_relevant,proposed_title,top1,top2,top3,human_decision,notes
-q-wiki-1770,កម្ពុជាស្ថិតនៅតំបន់ណា,wiki-1770,ព្រះរាជាណាចក្រកម្ពុជា,wiki-1770,wiki-21625,wiki-47458,,
-q-wiki-19591,កម្ពុជាមានខេត្តចំនួនប៉ុន្មាន,wiki-19591,បំណែងចែករដ្ឋបាលនៃកម្ពុជា,wiki-19591,wiki-21625,wiki-19359,,
-q-wiki-3009,ទង់ជាតិកម្ពុជាមានពណ៌អ្វីខ្លះ,wiki-3009,ទង់ជាតិកម្ពុជា,wiki-3009,wiki-21625,wiki-1770,,
-q-wiki-21749,រដ្ឋសភាកម្ពុជាមានសមាជិកប៉ុន្មាន,wiki-21749,រដ្ឋសភាកម្ពុជា,wiki-21749,wiki-21625,wiki-1770,,
-q-wiki-21625,កម្ពុជាមានរបបនយោបាយអ្វី,wiki-21625,នយោបាយនៅកម្ពុជា,wiki-21625,wiki-1770,wiki-10073,,
-q-wiki-10073,ប្រវត្តិសាស្ត្រកម្ពុជាចាប់ផ្តើមពីសម័យណា,wiki-10073,ប្រវត្តិសាស្ត្រកម្ពុជា,wiki-2356,wiki-47458,wiki-3009,,
-q-wiki-2165,សេដ្ឋកិច្ចកម្ពុជាពឹងផ្អែកលើវិស័យអ្វី,wiki-2165,សេដ្ឋកិច្ចកម្ពុជា,wiki-12953,wiki-2165,wiki-1770,,
-q-wiki-2377,បច្ចេកវិទ្យាមានន័យដូចម្តេច,wiki-2377,បច្ចេកវិទ្យា,wiki-2377,wiki-19223,wiki-4297,,
-q-wiki-19223,បច្ចេកវិទ្យាសារពត៌មានប្រើប្រព័ន្ធអ្វី,wiki-19223,បច្ចេកវិទ្យាសារពត៌មាន,wiki-19223,wiki-2377,wiki-19359,,
-q-wiki-4297,វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជាបណ្តុះបណ្តាលអ្វី,wiki-4297,វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា,wiki-4297,wiki-2377,wiki-4296,,
-q-wiki-2393,ការអប់រំមានតួនាទីអ្វី,wiki-2393,ការអប់រំ,wiki-19359,wiki-2393,wiki-12953,,
-q-wiki-19359,ប្រព័ន្ធអប់រំនៅកម្ពុជាគ្រប់គ្រងដោយអ្នកណា,wiki-19359,វិស័យអប់រំនៅកម្ពុជា,wiki-19359,wiki-12953,wiki-2393,,
-q-wiki-12953,ក្រសួងអប់រំយុវជននិងកីឡាមានបេសកកម្មអ្វី,wiki-12953,ក្រសួងអប់រំ យុវជន និងកីឡា,wiki-12953,wiki-19359,wiki-2393,,
-q-wiki-3693,អាកាសយានដ្ឋានអន្តរជាតិភ្នំពេញស្ថិតនៅចម្ងាយប៉ុន្មាន,wiki-3693,អាកាសយានដ្ឋានអន្តរជាតិភ្នំពេញ,wiki-3693,wiki-1770,wiki-19591,,
-q-wiki-4296,សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញជាគ្រឹះស្ថានអ្វី,wiki-4296,សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ,wiki-4296,wiki-4297,wiki-19591,,
-q-wiki-10690,ប្រទេសកម្ពុជាមានទន្លេអ្វីខ្លះ,wiki-10690,ទន្លេនៅកម្ពុជា,wiki-10690,wiki-1770,wiki-21625,,
-q-wiki-47458,វប្បធម៌កម្ពុជាទទួលឥទ្ធិពលពីសាសនាអ្វី,wiki-47458,វប្បធម៌កម្ពុជា,wiki-47458,wiki-34722,wiki-10073,,
-q-wiki-34722,វប្បធម៌មានន័យដូចម្តេច,wiki-34722,វប្បធម៌,wiki-34722,wiki-19223,wiki-47458,,
-q-wiki-2356,ប្រវត្តិសាស្ត្រសិក្សាអំពីអ្វី,wiki-2356,ប្រវត្តិសាស្ត្រ,wiki-2356,wiki-3009,wiki-2393,,
+q-wiki-1770,កម្ពុជាស្ថិតនៅតំបន់ណា,wiki-1770,ព្រះរាជាណាចក្រកម្ពុជា,wiki-1770,wiki-21625,wiki-47458,wiki-1770,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-19591,កម្ពុជាមានខេត្តចំនួនប៉ុន្មាន,wiki-19591,បំណែងចែករដ្ឋបាលនៃកម្ពុជា,wiki-19591,wiki-21625,wiki-19359,wiki-19591,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-3009,ទង់ជាតិកម្ពុជាមានពណ៌អ្វីខ្លះ,wiki-3009,ទង់ជាតិកម្ពុជា,wiki-3009,wiki-21625,wiki-1770,wiki-3009,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-21749,រដ្ឋសភាកម្ពុជាមានសមាជិកប៉ុន្មាន,wiki-21749,រដ្ឋសភាកម្ពុជា,wiki-21749,wiki-21625,wiki-1770,wiki-21749,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-21625,កម្ពុជាមានរបបនយោបាយអ្វី,wiki-21625,នយោបាយនៅកម្ពុជា,wiki-21625,wiki-1770,wiki-10073,wiki-21625,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-10073,ប្រវត្តិសាស្ត្រកម្ពុជាចាប់ផ្តើមពីសម័យណា,wiki-10073,ប្រវត្តិសាស្ត្រកម្ពុជា,wiki-2356,wiki-47458,wiki-3009,wiki-10073,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-2165,សេដ្ឋកិច្ចកម្ពុជាពឹងផ្អែកលើវិស័យអ្វី,wiki-2165,សេដ្ឋកិច្ចកម្ពុជា,wiki-12953,wiki-2165,wiki-1770,wiki-2165,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-2377,បច្ចេកវិទ្យាមានន័យដូចម្តេច,wiki-2377,បច្ចេកវិទ្យា,wiki-2377,wiki-19223,wiki-4297,wiki-2377,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-19223,បច្ចេកវិទ្យាសារពត៌មានប្រើប្រព័ន្ធអ្វី,wiki-19223,បច្ចេកវិទ្យាសារពត៌មាន,wiki-19223,wiki-2377,wiki-19359,wiki-19223,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-4297,វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជាបណ្តុះបណ្តាលអ្វី,wiki-4297,វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា,wiki-4297,wiki-2377,wiki-4296,wiki-4297,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-2393,ការអប់រំមានតួនាទីអ្វី,wiki-2393,ការអប់រំ,wiki-19359,wiki-2393,wiki-12953,wiki-2393,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-19359,ប្រព័ន្ធអប់រំនៅកម្ពុជាគ្រប់គ្រងដោយអ្នកណា,wiki-19359,វិស័យអប់រំនៅកម្ពុជា,wiki-19359,wiki-12953,wiki-2393,wiki-19359,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-12953,ក្រសួងអប់រំយុវជននិងកីឡាមានបេសកកម្មអ្វី,wiki-12953,ក្រសួងអប់រំ យុវជន និងកីឡា,wiki-12953,wiki-19359,wiki-2393,wiki-12953,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-3693,អាកាសយានដ្ឋានអន្តរជាតិភ្នំពេញស្ថិតនៅចម្ងាយប៉ុន្មាន,wiki-3693,អាកាសយានដ្ឋានអន្តរជាតិភ្នំពេញ,wiki-3693,wiki-1770,wiki-19591,wiki-3693,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-4296,សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញជាគ្រឹះស្ថានអ្វី,wiki-4296,សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ,wiki-4296,wiki-4297,wiki-19591,wiki-4296,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-10690,ប្រទេសកម្ពុជាមានទន្លេអ្វីខ្លះ,wiki-10690,ទន្លេនៅកម្ពុជា,wiki-10690,wiki-1770,wiki-21625,wiki-10690,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-47458,វប្បធម៌កម្ពុជាទទួលឥទ្ធិពលពីសាសនាអ្វី,wiki-47458,វប្បធម៌កម្ពុជា,wiki-47458,wiki-34722,wiki-10073,wiki-47458,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-34722,វប្បធម៌មានន័យដូចម្តេច,wiki-34722,វប្បធម៌,wiki-34722,wiki-19223,wiki-47458,wiki-34722,Assistant-selected from the source-aligned proposal. Human verification remains pending.
+q-wiki-2356,ប្រវត្តិសាស្ត្រសិក្សាអំពីអ្វី,wiki-2356,ប្រវត្តិសាស្ត្រ,wiki-2356,wiki-3009,wiki-2393,wiki-2356,Assistant-selected from the source-aligned proposal. Human verification remains pending.

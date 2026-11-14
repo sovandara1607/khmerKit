@@ -19,6 +19,8 @@ An assistant-drafted 20-query smoke test is available at `data/real/queries.assi
 
 Use `data/real/review-sheet.csv` to review the pending query labels without editing JSON directly.
 
+The assistant-filled review file is `data/real/queries.assistant-reviewed.jsonl`. It keeps `adjudicated: false` until a human confirms the decisions.
+
 ## Use KhmerKit from Python
 
 ```python

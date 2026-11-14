@@ -14,6 +14,8 @@ The root `LICENSE` applies to KhmerKit code. It does not relicense these source 
 
 `review-sheet.csv` is a compact review view for the 19 pending rows. Fill `human_decision` with one or more relevant document IDs, separated by commas, and add any explanation in `notes`. Leave a row unresolved when the source does not support a clear answer.
 
+`queries.assistant-reviewed.jsonl` contains the proposals filled by KhmerKit for convenience. Its rows remain `adjudicated: false`, so the file is suitable for smoke testing and review tracking. It is not the human-adjudicated benchmark input.
+
 After review, create `queries.reviewed.jsonl` using the normal evaluator format:
 
 ```json
