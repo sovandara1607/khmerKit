@@ -1,0 +1,14 @@
+{"type":"document","id":"doc-registration","text":"ការចុះឈ្មោះសិស្សថ្មីត្រូវការអត្តសញ្ញាណប័ណ្ណ និងរូបថត។"}
+{"type":"document","id":"doc-library","text":"បណ្ណាល័យបើកពីម៉ោងប្រាំបីព្រឹកដល់ម៉ោងប្រាំល្ងាច។"}
+{"type":"document","id":"doc-health","text":"មន្ទីរពេទ្យផ្តល់សេវាពិនិត្យសុខភាព និងវ៉ាក់សាំង។"}
+{"type":"document","id":"doc-water","text":"វិក្កយបត្រទឹកអាចបង់តាមធនាគារ ឬកម្មវិធីទូរស័ព្ទ។"}
+{"type":"document","id":"doc-transport","text":"សំបុត្ររថយន្តក្រុងអាចទិញតាមអ៊ីនធឺណិត។"}
+{"type":"document","id":"doc-mixed","text":"សេវា e-government អនុញ្ញាតឱ្យអ្នកប្រើប្រាស់ដាក់ពាក្យតាមអ៊ីនធឺណិត។"}
+{"type":"document","id":"doc-khmer","text":"ភាសាខ្មែរ ជាភាសាជាតិរបស់កម្ពុជា។"}
+{"type":"query","id":"q-registration","text":"លក្ខខណ្ឌ ចុះឈ្មោះ សិស្ស","relevant":["doc-registration"]}
+{"type":"query","id":"q-library","text":"បណ្ណាល័យ បើក ម៉ោង","relevant":["doc-library"]}
+{"type":"query","id":"q-health","text":"សេវា សុខភាព វ៉ាក់សាំង","relevant":["doc-health"]}
+{"type":"query","id":"q-water","text":"បង់ វិក្កយបត្រ ទឹក ធនាគារ","relevant":["doc-water"]}
+{"type":"query","id":"q-transport","text":"សំបុត្រ រថយន្តក្រុង អ៊ីនធឺណិត","relevant":["doc-transport"]}
+{"type":"query","id":"q-mixed","text":"e-government ដាក់ពាក្យ អ៊ីនធឺណិត","relevant":["doc-mixed"]}
+{"type":"query","id":"q-khmer-order","text":"ភាសាខែ្មរ","relevant":["doc-khmer"]}

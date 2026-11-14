@@ -1,0 +1,314 @@
+{
+  "exact_raw": {
+    "hit_rate_at_3": 0.42857142857142855,
+    "mean_reciprocal_rank": 0.35714285714285715,
+    "per_query": {
+      "q-registration": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-library": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-health": [
+        {
+          "doc_id": "doc-mixed",
+          "score": 0.3333333333333333
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        }
+      ],
+      "q-water": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-transport": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-mixed": [
+        {
+          "doc_id": "doc-mixed",
+          "score": 0.3333333333333333
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        }
+      ],
+      "q-khmer-order": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  "exact_normalized": {
+    "hit_rate_at_3": 0.5714285714285714,
+    "mean_reciprocal_rank": 0.5,
+    "per_query": {
+      "q-registration": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-library": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-health": [
+        {
+          "doc_id": "doc-mixed",
+          "score": 0.3333333333333333
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        }
+      ],
+      "q-water": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-transport": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-mixed": [
+        {
+          "doc_id": "doc-mixed",
+          "score": 0.3333333333333333
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        }
+      ],
+      "q-khmer-order": [
+        {
+          "doc_id": "doc-khmer",
+          "score": 1.0
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.0
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  "char_tfidf_normalized": {
+    "hit_rate_at_3": 1.0,
+    "mean_reciprocal_rank": 1.0,
+    "per_query": {
+      "q-registration": [
+        {
+          "doc_id": "doc-registration",
+          "score": 0.40289332925744165
+        },
+        {
+          "doc_id": "doc-water",
+          "score": 0.01343525053042879
+        },
+        {
+          "doc_id": "doc-library",
+          "score": 0.008177037223385215
+        }
+      ],
+      "q-library": [
+        {
+          "doc_id": "doc-library",
+          "score": 0.4463363008371416
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.02656224094921211
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.0
+        }
+      ],
+      "q-health": [
+        {
+          "doc_id": "doc-health",
+          "score": 0.5136358176648602
+        },
+        {
+          "doc_id": "doc-mixed",
+          "score": 0.10095666638429746
+        },
+        {
+          "doc_id": "doc-khmer",
+          "score": 0.03410696661470984
+        }
+      ],
+      "q-water": [
+        {
+          "doc_id": "doc-water",
+          "score": 0.5365685700609606
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.029992584220339045
+        },
+        {
+          "doc_id": "doc-transport",
+          "score": 0.026168100104190652
+        }
+      ],
+      "q-transport": [
+        {
+          "doc_id": "doc-transport",
+          "score": 0.735298050363571
+        },
+        {
+          "doc_id": "doc-mixed",
+          "score": 0.1627571730457779
+        },
+        {
+          "doc_id": "doc-water",
+          "score": 0.024618294231840566
+        }
+      ],
+      "q-mixed": [
+        {
+          "doc_id": "doc-mixed",
+          "score": 0.6146003563569628
+        },
+        {
+          "doc_id": "doc-transport",
+          "score": 0.1799276943600918
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.03771809878842474
+        }
+      ],
+      "q-khmer-order": [
+        {
+          "doc_id": "doc-khmer",
+          "score": 0.5245922309902008
+        },
+        {
+          "doc_id": "doc-health",
+          "score": 0.02097528777386425
+        },
+        {
+          "doc_id": "doc-registration",
+          "score": 0.014312227621235723
+        }
+      ]
+    }
+  }
+}
