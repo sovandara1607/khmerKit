@@ -49,3 +49,16 @@ def load_dataset(
         seen_query_ids.add(row["id"])
         queries.append(QueryCase(row["id"], row["text"], frozenset(row["relevant"])))
     return documents, queries
+
+
+def load_documents(path: Path) -> list[tuple[str, str]]:
+    """Load document IDs and text from a document-only JSONL file."""
+
+    documents = [
+        (row["id"], row["text"])
+        for row in _read_rows(path)
+        if row["type"] == "document"
+    ]
+    if not documents:
+        raise ValueError(f"no documents found in {path}")
+    return documents

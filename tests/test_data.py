@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from khmerkit.data import load_dataset
+from khmerkit.data import load_dataset, load_documents
 
 
 def test_query_only_file_infers_sibling_documents():
@@ -21,3 +21,8 @@ def test_assistant_draft_queries_cover_the_starter_corpus():
     document_ids = {doc_id for doc_id, _ in documents}
     assert len(queries) == 20
     assert all(case.relevant <= document_ids for case in queries)
+
+
+def test_load_documents_reads_real_corpus():
+    documents = load_documents(Path("data/real/documents.jsonl"))
+    assert len(documents) == 20

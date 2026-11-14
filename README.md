@@ -30,3 +30,13 @@ results = index.search("ស្វែងរកអត្ថបទ", k=3)
 ```
 
 The default backend is normalized character TF-IDF. Use `SearchIndex(documents, backend="exact")` when you need the transparent token-overlap baseline.
+
+## Try local search
+
+```bash
+khmerkit-search \
+  --documents data/real/documents.jsonl \
+  --query "រាជធានីរបស់កម្ពុជា"
+```
+
+Omit `--query` to enter multiple queries interactively. Each result is emitted as one JSON object with a document ID and score.
