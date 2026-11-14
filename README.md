@@ -65,3 +65,5 @@ curl -X POST http://127.0.0.1:8000/search \
 ```
 
 The current local smoke test retrieves an acceptable document for all 40 drafted queries in the top three. See [`docs/quality-smoke.md`](docs/quality-smoke.md) for the diagnostic scope.
+
+Version 0.1.0 is the first experimental release. See [`CHANGELOG.md`](CHANGELOG.md) for the included capabilities and evaluation status.
