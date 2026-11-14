@@ -1,0 +1,2 @@
+record_id,asset_path,source_url,source_title,publisher,license,license_url,rights_status,collected_at,content_sha256,redistributable,notes
+synthetic-starter,data/search_eval.synthetic.jsonl,local://khmerkit,KhmerKit synthetic search starter set,KhmerKit contributors,CC0-1.0,https://creativecommons.org/publicdomain/zero/1.0/,author-created,2026-11-14,sha256:569edf30af2ba37287ad396b5c96426d515aa17a969262369c2683048fe38634,true,Seven short documents and seven queries authored for the feasibility experiment.
