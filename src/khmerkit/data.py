@@ -67,3 +67,12 @@ def load_documents(path: Path) -> list[tuple[str, str]]:
     if not documents:
         raise ValueError(f"no documents found in {path}")
     return documents
+
+
+def load_document_records(path: Path) -> list[dict]:
+    """Load complete document records for API responses and UI source labels."""
+
+    records = [row for row in _read_rows(path) if row["type"] == "document"]
+    if not records:
+        raise ValueError(f"no documents found in {path}")
+    return records

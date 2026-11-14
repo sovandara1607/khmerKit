@@ -21,6 +21,24 @@ Use `data/real/review-sheet.csv` to review the pending query labels without edit
 
 The assistant-filled review file is `data/real/queries.assistant-reviewed.jsonl`. It keeps `adjudicated: false` until a human confirms the decisions.
 
+## Run the web playground
+
+Start the API from the repository root:
+
+```bash
+khmerkit-api --documents data/real/documents.jsonl --port 8000
+```
+
+Then start the web app in a second terminal:
+
+```bash
+cd apps/web
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. The homepage and playground call the live versioned API endpoints.
+
 ## Use KhmerKit from Python
 
 ```python
