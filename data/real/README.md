@@ -10,6 +10,8 @@ The root `LICENSE` applies to KhmerKit code. It does not relicense these source 
 
 `queries.unreviewed.jsonl` contains title-derived candidates. They are deliberately excluded from benchmark scores until two people independently label relevance and an adjudicator records final `relevant` document IDs. Candidate rows include `candidate_relevant` only to speed up review.
 
+`queries.assistant-draft.jsonl` contains 20 assistant-generated query and relevance drafts. Its scores are pipeline diagnostics only. It has `review_status: "assistant_draft"` and `adjudicated: false` on every row.
+
 After review, create `queries.reviewed.jsonl` using the normal evaluator format:
 
 ```json

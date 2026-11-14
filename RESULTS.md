@@ -20,3 +20,5 @@ The normalized exact baseline gains on the synthetic malformed-order query becau
 These results are not a quality claim. The corpus contains seven author-written documents and seven short queries, with one relevant document per query and no independent human annotation. The next benchmark should use permissioned real text, multiple annotators, and held-out queries.
 
 Phase 2 now includes 20 permissioned Khmer Wikipedia lead excerpts with page URLs, revision IDs, license records, and SHA-256 checksums. Their title-derived query candidates remain outside the score table until human relevance review is complete.
+
+An assistant-drafted smoke test over all 20 excerpts produced Hit Rate@3 0.950 for normalized character TF-IDF, 0.150 for both exact baselines, and MRR values of 0.900, 0.092, and 0.092 respectively. These are pipeline diagnostics because the query labels are assistant-generated and `adjudicated` is false.

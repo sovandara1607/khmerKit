@@ -14,3 +14,5 @@ For reviewed queries stored separately from the corpus, run `khmerkit-benchmark 
 Package code is in `src/khmerkit/`, tests are in `tests/`, and the synthetic evaluation set is in `data/`.
 
 The real starter corpus is in `data/real/`. Its 20 query candidates are marked `needs_human_review` and are excluded from benchmark scores until two independent labels and an adjudicated `relevant` field are added.
+
+An assistant-drafted 20-query smoke test is available at `data/real/queries.assistant-draft.jsonl`. Its benchmark output is `data/real/benchmark-results.assistant-draft.json`. Treat those numbers as pipeline diagnostics until human review is complete.

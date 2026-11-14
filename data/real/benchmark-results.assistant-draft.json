@@ -1,0 +1,860 @@
+{
+  "exact_raw": {
+    "hit_rate_at_3": 0.15,
+    "mean_reciprocal_rank": 0.09166666666666666,
+    "per_query": {
+      "q-wiki-1770": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-19591": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-3009": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-21749": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-21625": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-10073": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2165": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2377": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-19223": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-4297": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2393": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-19359": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-12953": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-1784": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-3693": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-4296": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-10690": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-47458": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-34722": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2356": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  "exact_normalized": {
+    "hit_rate_at_3": 0.15,
+    "mean_reciprocal_rank": 0.09166666666666666,
+    "per_query": {
+      "q-wiki-1770": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-19591": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-3009": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-21749": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-21625": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-10073": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2165": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2377": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-19223": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-4297": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2393": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-19359": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-12953": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-1784": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-3693": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-4296": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-10690": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-47458": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-34722": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ],
+      "q-wiki-2356": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.0
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.0
+        }
+      ]
+    }
+  },
+  "char_tfidf_normalized": {
+    "hit_rate_at_3": 0.95,
+    "mean_reciprocal_rank": 0.9,
+    "per_query": {
+      "q-wiki-1770": [
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.1498812468087983
+        },
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.08296871040252468
+        },
+        {
+          "doc_id": "wiki-47458",
+          "score": 0.06925022157691596
+        }
+      ],
+      "q-wiki-19591": [
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.23500387751169863
+        },
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.11753330868126197
+        },
+        {
+          "doc_id": "wiki-19359",
+          "score": 0.0891784979273406
+        }
+      ],
+      "q-wiki-3009": [
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.2983261710634757
+        },
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.09575297749243197
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.08814959731098813
+        }
+      ],
+      "q-wiki-21749": [
+        {
+          "doc_id": "wiki-21749",
+          "score": 0.2559594959839996
+        },
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.13809624214022337
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.1061842289986866
+        }
+      ],
+      "q-wiki-21625": [
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.132643598559986
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.11559632481145937
+        },
+        {
+          "doc_id": "wiki-10073",
+          "score": 0.09316367505932951
+        }
+      ],
+      "q-wiki-10073": [
+        {
+          "doc_id": "wiki-2356",
+          "score": 0.24438435793343186
+        },
+        {
+          "doc_id": "wiki-47458",
+          "score": 0.18376623957813182
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.16798780080425726
+        }
+      ],
+      "q-wiki-2165": [
+        {
+          "doc_id": "wiki-12953",
+          "score": 0.12671083389107285
+        },
+        {
+          "doc_id": "wiki-2165",
+          "score": 0.10560383686576141
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.09344015414063521
+        }
+      ],
+      "q-wiki-2377": [
+        {
+          "doc_id": "wiki-2377",
+          "score": 0.3233001581347696
+        },
+        {
+          "doc_id": "wiki-19223",
+          "score": 0.2109326887125476
+        },
+        {
+          "doc_id": "wiki-4297",
+          "score": 0.1599519148179979
+        }
+      ],
+      "q-wiki-19223": [
+        {
+          "doc_id": "wiki-19223",
+          "score": 0.47036100027840555
+        },
+        {
+          "doc_id": "wiki-2377",
+          "score": 0.3189205199382133
+        },
+        {
+          "doc_id": "wiki-19359",
+          "score": 0.14997108327526923
+        }
+      ],
+      "q-wiki-4297": [
+        {
+          "doc_id": "wiki-4297",
+          "score": 0.34953481449490853
+        },
+        {
+          "doc_id": "wiki-2377",
+          "score": 0.3391060911913556
+        },
+        {
+          "doc_id": "wiki-4296",
+          "score": 0.28793907763861687
+        }
+      ],
+      "q-wiki-2393": [
+        {
+          "doc_id": "wiki-19359",
+          "score": 0.2580130911560053
+        },
+        {
+          "doc_id": "wiki-2393",
+          "score": 0.1414890169293702
+        },
+        {
+          "doc_id": "wiki-12953",
+          "score": 0.08350182676505473
+        }
+      ],
+      "q-wiki-19359": [
+        {
+          "doc_id": "wiki-19359",
+          "score": 0.3366849812957698
+        },
+        {
+          "doc_id": "wiki-12953",
+          "score": 0.11012181035943133
+        },
+        {
+          "doc_id": "wiki-2393",
+          "score": 0.10840960831681817
+        }
+      ],
+      "q-wiki-12953": [
+        {
+          "doc_id": "wiki-12953",
+          "score": 0.3137754841829628
+        },
+        {
+          "doc_id": "wiki-19359",
+          "score": 0.19736637244153438
+        },
+        {
+          "doc_id": "wiki-2393",
+          "score": 0.07868558554606186
+        }
+      ],
+      "q-wiki-1784": [
+        {
+          "doc_id": "wiki-1784",
+          "score": 0.15970781974082743
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.12966718029708316
+        },
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.08630533404449359
+        }
+      ],
+      "q-wiki-3693": [
+        {
+          "doc_id": "wiki-3693",
+          "score": 0.6272495602088545
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.08547178452010018
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.08498422635372865
+        }
+      ],
+      "q-wiki-4296": [
+        {
+          "doc_id": "wiki-4296",
+          "score": 0.5381628218189841
+        },
+        {
+          "doc_id": "wiki-4297",
+          "score": 0.1297724213824793
+        },
+        {
+          "doc_id": "wiki-19591",
+          "score": 0.08827551915928197
+        }
+      ],
+      "q-wiki-10690": [
+        {
+          "doc_id": "wiki-10690",
+          "score": 0.3204090518903724
+        },
+        {
+          "doc_id": "wiki-1770",
+          "score": 0.16077851496918774
+        },
+        {
+          "doc_id": "wiki-21625",
+          "score": 0.13959963951587115
+        }
+      ],
+      "q-wiki-47458": [
+        {
+          "doc_id": "wiki-47458",
+          "score": 0.19037360137128342
+        },
+        {
+          "doc_id": "wiki-34722",
+          "score": 0.13994984720881481
+        },
+        {
+          "doc_id": "wiki-10073",
+          "score": 0.11274378972041078
+        }
+      ],
+      "q-wiki-34722": [
+        {
+          "doc_id": "wiki-34722",
+          "score": 0.19146111158363882
+        },
+        {
+          "doc_id": "wiki-19223",
+          "score": 0.09836235721689882
+        },
+        {
+          "doc_id": "wiki-47458",
+          "score": 0.09121391895574053
+        }
+      ],
+      "q-wiki-2356": [
+        {
+          "doc_id": "wiki-2356",
+          "score": 0.2897033344105269
+        },
+        {
+          "doc_id": "wiki-3009",
+          "score": 0.1387243682376499
+        },
+        {
+          "doc_id": "wiki-2393",
+          "score": 0.13677100137094447
+        }
+      ]
+    }
+  }
+}
