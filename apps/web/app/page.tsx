@@ -4,7 +4,7 @@ import { Playground } from "../components/Playground";
 
 export default function Home() {
   return <>
-    <Header />
+    <Header landing />
     <main className="landing-page">
       <section className="landing-hero section-wrap">
         <div className="hero-context"><span>KHMER TEXT INFRASTRUCTURE</span><span>LOCAL-FIRST / OPEN SOURCE</span></div>
