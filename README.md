@@ -17,6 +17,8 @@ The real starter corpus is in `data/real/`. Its 20 query candidates are marked `
 
 An assistant-drafted 20-query smoke test is available at `data/real/queries.assistant-draft.jsonl`. Its benchmark output is `data/real/benchmark-results.assistant-draft.json`. Treat those numbers as pipeline diagnostics until human review is complete.
 
+Use `data/real/review-sheet.csv` to review the pending query labels without editing JSON directly.
+
 ## Use KhmerKit from Python
 
 ```python

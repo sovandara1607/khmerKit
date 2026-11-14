@@ -12,6 +12,8 @@ The root `LICENSE` applies to KhmerKit code. It does not relicense these source 
 
 `queries.assistant-draft.jsonl` contains 20 assistant-generated query and relevance drafts. Its scores are pipeline diagnostics only. It has `review_status: "assistant_draft"` and `adjudicated: false` on every row.
 
+`review-sheet.csv` is a compact review view for the 19 pending rows. Fill `human_decision` with one or more relevant document IDs, separated by commas, and add any explanation in `notes`. Leave a row unresolved when the source does not support a clear answer.
+
 After review, create `queries.reviewed.jsonl` using the normal evaluator format:
 
 ```json
