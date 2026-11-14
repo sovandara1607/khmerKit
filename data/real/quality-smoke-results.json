@@ -1,33 +1,92 @@
 {
-  "query_count": 10,
-  "hit_rate_at_3": 0.9,
+  "query_count": 40,
+  "hit_rate_at_3": 1.0,
   "results": [
     {
       "id": "smoke-001",
-      "query": "រាជធានីកម្ពុជា",
-      "expected": "wiki-1784",
+      "query": "កម្ពុជាស្ថិតនៅអាស៊ីអាគ្នេយ៍",
+      "expected": [
+        "wiki-1770"
+      ],
       "top3": [
-        "wiki-1784",
         "wiki-1770",
-        "wiki-21625"
+        "wiki-2356",
+        "wiki-47458"
       ],
       "hit_at_3": true
     },
     {
       "id": "smoke-002",
-      "query": "ខេត្តនៅកម្ពុជា",
-      "expected": "wiki-19591",
+      "query": "រាជធានីនិងទីក្រុងធំបំផុតកម្ពុជា",
+      "expected": [
+        "wiki-1770",
+        "wiki-1784"
+      ],
       "top3": [
-        "wiki-19591",
-        "wiki-21625",
-        "wiki-19359"
+        "wiki-1784",
+        "wiki-1770",
+        "wiki-19591"
       ],
       "hit_at_3": true
     },
     {
       "id": "smoke-003",
-      "query": "សមាជិករដ្ឋសភា",
-      "expected": "wiki-21749",
+      "query": "កម្ពុជាមានខេត្តប៉ុន្មាន",
+      "expected": [
+        "wiki-19591"
+      ],
+      "top3": [
+        "wiki-19591",
+        "wiki-21625",
+        "wiki-3009"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-004",
+      "query": "ការបែងចែករដ្ឋបាលកម្ពុជា",
+      "expected": [
+        "wiki-19591"
+      ],
+      "top3": [
+        "wiki-19591",
+        "wiki-21625",
+        "wiki-1770"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-005",
+      "query": "ទង់ជាតិមានពណ៌ប៉ុន្មាន",
+      "expected": [
+        "wiki-3009"
+      ],
+      "top3": [
+        "wiki-3009",
+        "wiki-19223",
+        "wiki-2356"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-006",
+      "query": "រូបប្រាសាទអង្គរវត្តលើទង់ជាតិ",
+      "expected": [
+        "wiki-3009"
+      ],
+      "top3": [
+        "wiki-3009",
+        "wiki-47458",
+        "wiki-10073"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-007",
+      "query": "រដ្ឋសភាមានអាសនៈប៉ុន្មាន",
+      "expected": [
+        "wiki-21749"
+      ],
       "top3": [
         "wiki-21749",
         "wiki-21625",
@@ -36,42 +95,102 @@
       "hit_at_3": true
     },
     {
-      "id": "smoke-004",
-      "query": "ការអប់រំនៅកម្ពុជា",
-      "expected": "wiki-19359",
-      "top3": [
-        "wiki-19359",
-        "wiki-2393",
-        "wiki-12953"
+      "id": "smoke-008",
+      "query": "សមាជិកសភាកម្ពុជាជ្រើសតាំងយ៉ាងដូចម្តេច",
+      "expected": [
+        "wiki-21749"
       ],
-      "hit_at_3": true
-    },
-    {
-      "id": "smoke-005",
-      "query": "សាកលវិទ្យាល័យភូមិន្ទ",
-      "expected": "wiki-4296",
       "top3": [
-        "wiki-4296",
-        "wiki-2393",
-        "wiki-4297"
-      ],
-      "hit_at_3": true
-    },
-    {
-      "id": "smoke-006",
-      "query": "ទន្លេនៅប្រទេសកម្ពុជា",
-      "expected": "wiki-10690",
-      "top3": [
-        "wiki-10690",
+        "wiki-21749",
         "wiki-21625",
         "wiki-1770"
       ],
       "hit_at_3": true
     },
     {
-      "id": "smoke-007",
-      "query": "បច្ចេកវិទ្យា",
-      "expected": "wiki-2377",
+      "id": "smoke-009",
+      "query": "នាយករដ្ឋមន្ត្រីជាប្រមុខរដ្ឋាភិបាល",
+      "expected": [
+        "wiki-21625"
+      ],
+      "top3": [
+        "wiki-21625",
+        "wiki-1770",
+        "wiki-21749"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-010",
+      "query": "របបរាជាធិបតេយ្យអាស្រ័យរដ្ឋធម្មនុញ្ញ",
+      "expected": [
+        "wiki-21625"
+      ],
+      "top3": [
+        "wiki-21625",
+        "wiki-1770",
+        "wiki-19359"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-011",
+      "query": "ប្រវត្តិសាស្ត្រកម្ពុជាសម័យហ្វូណន",
+      "expected": [
+        "wiki-10073"
+      ],
+      "top3": [
+        "wiki-2356",
+        "wiki-10073",
+        "wiki-47458"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-012",
+      "query": "អរិយធម៌បុរាណកម្ពុជា",
+      "expected": [
+        "wiki-10073"
+      ],
+      "top3": [
+        "wiki-34722",
+        "wiki-47458",
+        "wiki-10073"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-013",
+      "query": "ផលិតផលសរុបក្នុងស្រុកកម្ពុជា",
+      "expected": [
+        "wiki-2165"
+      ],
+      "top3": [
+        "wiki-2165",
+        "wiki-19591",
+        "wiki-21625"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-014",
+      "query": "វិស័យកសិកម្មសេដ្ឋកិច្ចកម្ពុជា",
+      "expected": [
+        "wiki-2165"
+      ],
+      "top3": [
+        "wiki-2165",
+        "wiki-12953",
+        "wiki-21625"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-015",
+      "query": "វិស្វកម្មរចនាបច្ចេកវិទ្យា",
+      "expected": [
+        "wiki-2377"
+      ],
       "top3": [
         "wiki-2377",
         "wiki-19223",
@@ -80,20 +199,297 @@
       "hit_at_3": true
     },
     {
-      "id": "smoke-008",
-      "query": "អាកាសយានដ្ឋានភ្នំពេញ",
-      "expected": "wiki-3693",
+      "id": "smoke-016",
+      "query": "បច្ចេកវិទ្យាមានឧបករណ៍អ្វីខ្លះ",
+      "expected": [
+        "wiki-2377"
+      ],
       "top3": [
-        "wiki-3693",
+        "wiki-2377",
+        "wiki-19223",
+        "wiki-4297"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-017",
+      "query": "ការរាយការណ៍តាមអ៊ីនធឺណិត",
+      "expected": [
+        "wiki-19223"
+      ],
+      "top3": [
+        "wiki-19223",
+        "wiki-19359",
+        "wiki-2393"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-018",
+      "query": "បច្ចេកវិទ្យាសារព័ត៌មាន",
+      "expected": [
+        "wiki-19223"
+      ],
+      "top3": [
+        "wiki-19223",
+        "wiki-2377",
+        "wiki-4297"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-019",
+      "query": "វិទ្យាស្ថានបច្ចេកវិទ្យាបណ្តុះបណ្តាលវិស្វករ",
+      "expected": [
+        "wiki-4297"
+      ],
+      "top3": [
+        "wiki-2377",
+        "wiki-4297",
+        "wiki-4296"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-020",
+      "query": "វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជាបង្កើតឆ្នាំណា",
+      "expected": [
+        "wiki-4297"
+      ],
+      "top3": [
+        "wiki-2377",
+        "wiki-4297",
+        "wiki-4296"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-021",
+      "query": "ការអប់រំជាអ្វី",
+      "expected": [
+        "wiki-2393"
+      ],
+      "top3": [
+        "wiki-19359",
+        "wiki-2393",
+        "wiki-12953"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-022",
+      "query": "ការបណ្តុះបណ្តាលនិងបង្រៀន",
+      "expected": [
+        "wiki-2393"
+      ],
+      "top3": [
+        "wiki-2393",
+        "wiki-34722",
+        "wiki-4297"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-023",
+      "query": "សិទ្ធិអប់រំនៅកម្ពុជា",
+      "expected": [
+        "wiki-19359"
+      ],
+      "top3": [
+        "wiki-19359",
+        "wiki-12953",
+        "wiki-2393"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-024",
+      "query": "ក្រសួងអប់រំគ្រប់គ្រងសាលារៀន",
+      "expected": [
+        "wiki-19359"
+      ],
+      "top3": [
+        "wiki-19359",
+        "wiki-12953",
+        "wiki-2393"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-025",
+      "query": "បេសកកម្មក្រសួងអប់រំ",
+      "expected": [
+        "wiki-12953"
+      ],
+      "top3": [
+        "wiki-19359",
+        "wiki-12953",
+        "wiki-2393"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-026",
+      "query": "ក្រសួងអប់រំយុវជននិងកីឡា",
+      "expected": [
+        "wiki-12953"
+      ],
+      "top3": [
+        "wiki-12953",
+        "wiki-19359",
+        "wiki-2393"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-027",
+      "query": "មជ្ឈមណ្ឌលពាណិជ្ជកម្មភ្នំពេញ",
+      "expected": [
+        "wiki-1784"
+      ],
+      "top3": [
         "wiki-1784",
+        "wiki-10073",
         "wiki-19591"
       ],
       "hit_at_3": true
     },
     {
-      "id": "smoke-009",
-      "query": "វប្បធម៌ខ្មែរ",
-      "expected": "wiki-47458",
+      "id": "smoke-028",
+      "query": "ប្រវត្តិនៃទីក្រុងភ្នំពេញ",
+      "expected": [
+        "wiki-1784"
+      ],
+      "top3": [
+        "wiki-1784",
+        "wiki-19591",
+        "wiki-2356"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-029",
+      "query": "PNH អាកាសយានដ្ឋាន",
+      "expected": [
+        "wiki-3693"
+      ],
+      "top3": [
+        "wiki-3693",
+        "wiki-21625",
+        "wiki-19359"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-030",
+      "query": "អាកាសយានដ្ឋានពោធិ៍ចិនតុង",
+      "expected": [
+        "wiki-3693"
+      ],
+      "top3": [
+        "wiki-3693",
+        "wiki-1770",
+        "wiki-21625"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-031",
+      "query": "RUPP សាកលវិទ្យាល័យ",
+      "expected": [
+        "wiki-4296"
+      ],
+      "top3": [
+        "wiki-4296",
+        "wiki-2393",
+        "wiki-4297"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-032",
+      "query": "សាកលវិទ្យាល័យធំបំផុតកម្ពុជា",
+      "expected": [
+        "wiki-4296"
+      ],
+      "top3": [
+        "wiki-4296",
+        "wiki-4297",
+        "wiki-2393"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-033",
+      "query": "ទន្លេសាប និងមេគង្គ",
+      "expected": [
+        "wiki-10690"
+      ],
+      "top3": [
+        "wiki-10690",
+        "wiki-2356",
+        "wiki-47458"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-034",
+      "query": "ប្រព័ន្ធផ្លូវទឹកកម្ពុជា",
+      "expected": [
+        "wiki-10690"
+      ],
+      "top3": [
+        "wiki-10690",
+        "wiki-21625",
+        "wiki-1770"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-035",
+      "query": "សាសនាជាប្រភពវប្បធម៌",
+      "expected": [
+        "wiki-47458"
+      ],
+      "top3": [
+        "wiki-47458",
+        "wiki-34722",
+        "wiki-1770"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-036",
+      "query": "វប្បធម៌កម្ពុជាព្រហ្មញ្ញសាសនា",
+      "expected": [
+        "wiki-47458"
+      ],
+      "top3": [
+        "wiki-47458",
+        "wiki-34722",
+        "wiki-10073"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-037",
+      "query": "វប្បធ៌មានន័យច្រើន",
+      "expected": [
+        "wiki-34722"
+      ],
+      "top3": [
+        "wiki-34722",
+        "wiki-19223",
+        "wiki-47458"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-038",
+      "query": "វប្បធម៌សិល្បៈអក្សរសាស្ត្រ",
+      "expected": [
+        "wiki-34722"
+      ],
       "top3": [
         "wiki-34722",
         "wiki-47458",
@@ -102,15 +498,30 @@
       "hit_at_3": true
     },
     {
-      "id": "smoke-010",
-      "query": "ប្រវត្តិសាស្ត្រខ្មែរ",
-      "expected": "wiki-10073",
+      "id": "smoke-039",
+      "query": "ប្រវត្តិសាស្ត្រសិក្សាហេតុការណ៍",
+      "expected": [
+        "wiki-2356"
+      ],
+      "top3": [
+        "wiki-2356",
+        "wiki-2393",
+        "wiki-3009"
+      ],
+      "hit_at_3": true
+    },
+    {
+      "id": "smoke-040",
+      "query": "បុរេប្រវត្តិសាស្ត្រ",
+      "expected": [
+        "wiki-2356"
+      ],
       "top3": [
         "wiki-2356",
         "wiki-3009",
-        "wiki-47458"
+        "wiki-2377"
       ],
-      "hit_at_3": false
+      "hit_at_3": true
     }
   ]
 }

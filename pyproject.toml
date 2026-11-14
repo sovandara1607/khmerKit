@@ -22,6 +22,7 @@ dev = ["pytest>=8,<10"]
 khmerkit-benchmark = "khmerkit.cli:main"
 khmerkit-validate-provenance = "khmerkit.provenance:main"
 khmerkit-search = "khmerkit.search_cli:main"
+khmerkit-quality-smoke = "khmerkit.quality_smoke:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

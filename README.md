@@ -41,4 +41,4 @@ khmerkit-search \
 
 Omit `--query` to enter multiple queries interactively. Each result is emitted as one JSON object with a document ID and score.
 
-The current local smoke test retrieves 9 of 10 expected documents in the top three. See [`docs/quality-smoke.md`](docs/quality-smoke.md) for the one ambiguous history query.
+The current local smoke test retrieves an acceptable document for all 40 drafted queries in the top three. See [`docs/quality-smoke.md`](docs/quality-smoke.md) for the diagnostic scope.
