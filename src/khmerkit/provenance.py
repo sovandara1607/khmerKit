@@ -11,6 +11,7 @@ REQUIRED_COLUMNS = frozenset(
         "asset_path",
         "source_url",
         "source_title",
+        "source_revision_id",
         "publisher",
         "license",
         "license_url",
@@ -29,6 +30,7 @@ class ProvenanceRecord:
     asset_path: str
     source_url: str
     source_title: str
+    source_revision_id: str
     publisher: str
     license: str
     license_url: str
@@ -62,7 +64,7 @@ def load_provenance(path: Path) -> list[ProvenanceRecord]:
             required_values = [
                 row[column].strip()
                 for column in REQUIRED_COLUMNS
-                if column not in {"redistributable", "notes"}
+                if column not in {"redistributable", "notes", "source_revision_id"}
             ]
             if any(not value for value in required_values):
                 raise ValueError(f"line {line_number}: required provenance value is empty")
@@ -79,6 +81,7 @@ def load_provenance(path: Path) -> list[ProvenanceRecord]:
                     asset_path=row["asset_path"].strip(),
                     source_url=row["source_url"].strip(),
                     source_title=row["source_title"].strip(),
+                    source_revision_id=row["source_revision_id"].strip(),
                     publisher=row["publisher"].strip(),
                     license=row["license"].strip(),
                     license_url=row["license_url"].strip(),

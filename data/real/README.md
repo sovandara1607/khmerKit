@@ -1,0 +1,17 @@
+# Khmer Wikipedia starter corpus
+
+This directory contains 20 Khmer Wikipedia lead excerpts fetched on 2026-11-14 from `km.wikipedia.org` through the MediaWiki API. Each excerpt is limited to 1,200 characters and is stored as an adapted extract. The source page URL and revision ID are recorded in [`../provenance.csv`](../provenance.csv).
+
+Wikimedia text reuse requires attribution and ShareAlike compliance. The source pages are identified as CC BY-SA 4.0 and GFDL in the Wikimedia terms. The page URL in the provenance ledger supplies the attribution path. The excerpts have been shortened, so releases should state that the text was modified. See the [Wikimedia terms of use](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use) and [CC BY-SA 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/).
+
+The root `LICENSE` applies to KhmerKit code. It does not relicense these source excerpts. Keep the source license and attribution with any distribution that includes this directory.
+
+## Query status
+
+`queries.unreviewed.jsonl` contains title-derived candidates. They are deliberately excluded from benchmark scores until two people independently label relevance and an adjudicator records final `relevant` document IDs. Candidate rows include `candidate_relevant` only to speed up review.
+
+After review, create `queries.reviewed.jsonl` using the normal evaluator format:
+
+```json
+{"type":"query","id":"q-wiki-1784","text":"រាជធានីរបស់កម្ពុជា","relevant":["wiki-1784"],"annotators":["a1","a2"],"adjudicated":true}
+```

@@ -10,3 +10,5 @@ This repository keeps the package, tests, data, and research notes at the projec
 ```
 
 Package code is in `src/khmerkit/`, tests are in `tests/`, and the synthetic evaluation set is in `data/`.
+
+The real starter corpus is in `data/real/`. Its 20 query candidates are marked `needs_human_review` and are excluded from benchmark scores until two independent labels and an adjudicated `relevant` field are added.
