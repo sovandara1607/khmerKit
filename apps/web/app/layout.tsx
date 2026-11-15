@@ -5,16 +5,16 @@ const BASE_URL = "https://khmerkit.sovandara.lol";
 
 export const metadata: Metadata = {
   title: {
-    default: "KhmerKit — Build Better Khmer AI",
+    default: "KhmerKit | Build Better Khmer AI",
     template: "%s | KhmerKit",
   },
   description:
-    "Khmer text infrastructure for developers — normalization, document search, and evaluation in one small toolkit.",
+    "Khmer text infrastructure for developers | normalization, document search, and evaluation in one small toolkit.",
   metadataBase: new URL(BASE_URL),
   openGraph: {
-    title: "KhmerKit — Build Better Khmer AI",
+    title: "KhmerKit | Build Better Khmer AI",
     description:
-      "Khmer text infrastructure for developers — normalization, document search, and evaluation in one small toolkit.",
+      "Khmer text infrastructure for developers | normalization, document search, and evaluation in one small toolkit.",
     url: BASE_URL,
     siteName: "KhmerKit",
     locale: "en_US",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KhmerKit — Build Better Khmer AI",
+    title: "KhmerKit | Build Better Khmer AI",
     description:
-      "Khmer text infrastructure for developers — normalization, document search, and evaluation in one small toolkit.",
+      "Khmer text infrastructure for developers | normalization, document search, and evaluation in one small toolkit.",
   },
   robots: {
     index: true,
