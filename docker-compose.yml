@@ -1,0 +1,31 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: khmerkit-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - KHMERKIT_CORS_ORIGINS=http://localhost:3000,http://web:3000,https://khmerkit.sovandara.lol
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    container_name: khmerkit-web
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - KHMERKIT_BACKEND_URL=http://api:8000
+      - NODE_ENV=production
+    depends_on:
+      api:
+        condition: service_healthy

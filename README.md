@@ -1,35 +1,114 @@
-# KhmerKit side project
+# KhmerKit
 
-This repository keeps the package, tests, data, and research notes at the project root for one-command use.
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](pyproject.toml)
+[![Build Status](https://img.shields.io/badge/tests-passing-brightgreen.svg)](tests/)
+
+**KhmerKit** is an open-source Khmer Natural Language Processing (NLP) toolkit that helps developers normalize Khmer text, search Khmer documents, evaluate retrieval methods, and integrate Khmer language processing into their applications.
+
+- **Website & Interactive Playground:** [https://khmerkit.sovandara.lol/](https://khmerkit.sovandara.lol/)
+- **Repository:** [https://github.com/sovandara1607/khmerKit](https://github.com/sovandara1607/khmerKit)
+
+---
+
+## Why KhmerKit?
+
+Processing Khmer text poses unique computational challenges:
+- **No spaces between words:** Khmer words are written continuously without spaces; spaces are used only as sentence or phrase separators.
+- **Complex character ordering:** Inverted vowels, sub-consonant signs (*Coeng* `\u17D2`), and diacritics frequently lead to visually identical text having completely different underlying Unicode representations.
+- **Heavyweight dependencies:** Existing solutions often depend on non-commercial datasets, complex unmaintained C++ binaries, or multi-gigabyte neural models.
+
+KhmerKit provides a small, reproducible, offline-first alternative:
+1. **Canonical Normalization:** Unicode NFC, Khmer diacritic reordering, and whitespace folding.
+2. **Lexical Document Retrieval:** Character n-gram TF-IDF search that operates across mixed Khmer and English text without requiring dictionary word segmentation.
+3. **Transparent Evaluation:** Provenance-attributed evaluation benchmarks and diagnostic hit rates.
+
+---
+
+## Quickstart
+
+### 1. Installation
+
+Clone the repository and install with development dependencies:
 
 ```bash
-.venv/bin/python -m pip install '.[dev]'
-.venv/bin/pytest
-.venv/bin/khmerkit-benchmark --dataset data/search_eval.synthetic.jsonl --output benchmark-results.json
-.venv/bin/khmerkit-validate-provenance data/provenance.csv
+git clone https://github.com/sovandara1607/khmerKit.git
+cd khmerKit
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev]'
 ```
 
-For reviewed queries stored separately from the corpus, run `khmerkit-benchmark --dataset data/real/queries.reviewed.jsonl --documents data/real/documents.jsonl --adjudicated-only --output data/real/benchmark-results.adjudicated.json`. The CLI also infers a sibling `documents.jsonl` file when `--documents` is omitted.
+### 2. Python SDK Usage
 
-Package code is in `src/khmerkit/`, tests are in `tests/`, and the synthetic evaluation set is in `data/`.
+#### Text Normalization
+```python
+from khmerkit import normalize_text
 
-The real starter corpus is in `data/real/`. Its 20 query candidates are marked `needs_human_review` and are excluded from benchmark scores until two independent labels and an adjudicated `relevant` field are added.
+result = normalize_text("ខែ្មរ")
+print("Normalized text:", result.text)
+print("Was modified:", result.used_pheasa)
+```
 
-An assistant-drafted 20-query smoke test is available at `data/real/queries.assistant-draft.jsonl`. Its benchmark output is `data/real/benchmark-results.assistant-draft.json`. Treat those numbers as pipeline diagnostics until human review is complete.
+#### Document Search
+```python
+from khmerkit import SearchIndex
 
-Use `data/real/review-sheet.csv` to review the pending query labels without editing JSON directly.
+documents = [
+    ("doc-1", "ភ្នំពេញ គឺជារាជធានីនិងទីក្រុងធំបំផុតនៃប្រទេសកម្ពុជា។"),
+    ("doc-2", "ប្រាសាទអង្គរវត្ត ស្ថិតនៅក្នុងខេត្តសៀមរាប។"),
+    ("doc-3", "ភាសាខ្មែរ គឺជាភាសាផ្លូវការរបស់ព្រះរាជាណាចក្រកម្ពុជា។"),
+]
 
-The assistant-filled review file is `data/real/queries.assistant-reviewed.jsonl`. It keeps `adjudicated: false` until a human confirms the decisions.
+# Character n-gram TF-IDF search index
+index = SearchIndex(documents)
+results = index.search("រាជធានីរបស់កម្ពុជា", k=3)
 
-## Run the web playground
+for match in results:
+    print(f"[{match.doc_id}] score={match.score:.4f}")
+```
 
-Start the API from the repository root:
+---
 
+## Command-Line Tools
+
+KhmerKit installs several CLI utilities:
+
+### Search the Starter Corpus
 ```bash
-khmerkit-api --documents data/real/documents.jsonl --port 8000
+khmerkit-search --documents data/real/documents.jsonl --query "រាជធានីរបស់កម្ពុជា"
 ```
 
-Then start the web app in a second terminal:
+### Run Benchmark Evaluation
+```bash
+khmerkit-benchmark --dataset data/search_eval.synthetic.jsonl --output benchmark-results.json
+```
+
+### Validate Corpus Provenance
+```bash
+khmerkit-validate-provenance data/provenance.csv
+```
+
+### Run the FastAPI Service
+```bash
+khmerkit-api --documents data/real/documents.jsonl --host 0.0.0.0 --port 8000
+```
+
+---
+
+## REST API Endpoints
+
+When running `khmerkit-api`:
+
+- `GET /health` and `GET /v1/health`: Service health and loaded document count
+- `POST /v1/text/normalize`: JSON payload `{"text": "...", "profile": "khmer"}`
+- `POST /v1/search/query`: JSON payload `{"collection_id": "demo", "query": "...", "method": "char_tfidf", "top_k": 3}`
+
+---
+
+## Web Playground & Documentation
+
+The Next.js web application is located in `apps/web`:
 
 ```bash
 cd apps/web
@@ -37,51 +116,24 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`. The homepage and playground call the live versioned API endpoints.
+Open [http://localhost:3000](http://localhost:3000) to access the interactive normalization workbench, document search demo, documentation, and benchmark metrics.
 
-## Use KhmerKit from Python
+---
 
-```python
-from khmerkit.search import SearchIndex
-
-index = SearchIndex([
-    ("doc-1", "អត្ថបទជាភាសាខ្មែរ"),
-    ("doc-2", "English and Khmer text"),
-])
-results = index.search("ស្វែងរកអត្ថបទ", k=3)
-```
-
-The default backend is normalized character TF-IDF. Use `SearchIndex(documents, backend="exact")` when you need the transparent token-overlap baseline.
-
-`SegmentedSearch` and `SearchIndex(..., backend="segmented_tfidf", segmenter=...)` accept a caller-supplied segmenter. The optional `khmer-segmenter` adapter is kept outside the core dependencies until its package license is confirmed.
-
-The local segmenter comparison used `khmer-segmenter==0.1.0` and produced the same 0.950 Hit Rate@3 as character TF-IDF. Its report is `data/real/benchmark-results.segmented-assistant-reviewed.json`.
-
-## Try local search
+## Running Automated Tests
 
 ```bash
-khmerkit-search \
-  --documents data/real/documents.jsonl \
-  --query "រាជធានីរបស់កម្ពុជា"
+# Run Python unit and integration tests
+pytest -v
+
+# Run Frontend typecheck and production build
+npm --prefix apps/web run typecheck
+npm --prefix apps/web run build
 ```
 
-Omit `--query` to enter multiple queries interactively. Each result is emitted as one JSON object with a document ID and score.
+---
 
-## Run the local API
+## License
 
-```bash
-khmerkit-api --documents data/real/documents.jsonl --port 8000
-```
-
-Check the service:
-
-```bash
-curl http://127.0.0.1:8000/health
-curl -X POST http://127.0.0.1:8000/search \
-  -H 'content-type: application/json' \
-  -d '{"query":"រាជធានីរបស់កម្ពុជា","k":3}'
-```
-
-The current local smoke test retrieves an acceptable document for all 40 drafted queries in the top three. See [`docs/quality-smoke.md`](docs/quality-smoke.md) for the diagnostic scope.
-
-Version 0.1.0 is the first experimental release. See [`CHANGELOG.md`](CHANGELOG.md) for the included capabilities and evaluation status.
+This project is licensed under the **Apache License, Version 2.0**. See the [LICENSE](LICENSE) file for details.
+All corpus starter documents include source attribution in [data/provenance.csv](data/provenance.csv).

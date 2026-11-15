@@ -136,7 +136,7 @@ export default function Home() {
               </div>
 
               <p className="hero-disclaimer">
-                MIT-licensed code · source-attributed corpus · benchmarked locally
+                Apache-2.0 licensed code · source-attributed corpus · benchmarked locally
               </p>
             </div>
 

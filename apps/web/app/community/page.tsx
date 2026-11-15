@@ -30,7 +30,7 @@ git commit -m "feat: improve subscript ligature ordering"`;
             <span className="section-tag">OPEN-SOURCE ECOSYSTEM · COMMUNITY</span>
             <h1>Build the missing layer together.</h1>
             <p className="page-lede">
-              KhmerKit is open source under the MIT license. We believe Khmer text processing infrastructure should be inspectable, evidence-based, and accessible to every developer building in Cambodia.
+              KhmerKit is open source under the Apache-2.0 license. We believe Khmer text processing infrastructure should be inspectable, evidence-based, and accessible to every developer building in Cambodia.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ git commit -m "feat: improve subscript ligature ordering"`;
 
               <div className="value-box">
                 <span className="value-label">OPENNESS</span>
-                <h3>MIT Licensed</h3>
+                <h3>Apache-2.0 Licensed</h3>
                 <p>Completely free for commercial applications, academic research, and community language tooling.</p>
               </div>
             </div>

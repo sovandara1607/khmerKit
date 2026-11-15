@@ -1,21 +1,27 @@
-"""Small HTTP API for local KhmerKit search."""
+"""HTTP API for local and production KhmerKit search and text normalization."""
 
 import argparse
+from datetime import datetime, timezone
+import logging
+import os
+from pathlib import Path
 import time
 import unicodedata
-from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from .data import load_document_records, load_documents
+from . import __version__
+from .data import load_document_records
 from .normalize import normalize_text
 from .search import ExactSearch, SearchIndex
 
+logger = logging.getLogger("khmerkit.api")
+
 
 class SearchRequest(BaseModel):
-    query: str = Field(min_length=1)
+    query: str = Field(min_length=1, max_length=1000)
     k: int = Field(default=3, ge=1, le=20)
 
 
@@ -30,8 +36,8 @@ class SearchResponse(BaseModel):
 
 
 class NormalizeRequest(BaseModel):
-    text: str
-    profile: str = "khmer"
+    text: str = Field(..., max_length=50000)
+    profile: str = Field(default="khmer")
 
 
 class NormalizeResponse(BaseModel):
@@ -43,9 +49,9 @@ class NormalizeResponse(BaseModel):
 
 
 class VersionedSearchRequest(BaseModel):
-    collection_id: str = "demo"
-    query: str = Field(min_length=1)
-    method: str = "char_tfidf"
+    collection_id: str = Field(default="demo")
+    query: str = Field(min_length=1, max_length=1000)
+    method: str = Field(default="char_tfidf")
     top_k: int = Field(default=3, ge=1, le=20)
 
 
@@ -62,24 +68,68 @@ class VersionedSearchResponse(BaseModel):
     processing_time_ms: float
 
 
+class HealthResponse(BaseModel):
+    status: str
+    version: str
+    documents: int
+    timestamp: str
+
+
 def create_app(documents_path: Path = Path("data/real/documents.jsonl")) -> FastAPI:
     document_records = load_document_records(documents_path)
     documents = [(row["id"], row["text"]) for row in document_records]
     metadata = {row["id"]: row for row in document_records}
     index = SearchIndex(documents)
     exact_index = ExactSearch(documents, normalize=True)
-    app = FastAPI(title="KhmerKit Search API", version="0.1.0")
+
+    app = FastAPI(
+        title="KhmerKit Search & Normalization API",
+        version=__version__,
+        description="Lightweight Khmer text normalization and document retrieval API",
+    )
+
+    cors_origins_env = os.getenv("KHMERKIT_CORS_ORIGINS")
+    if cors_origins_env:
+        origins = [o.strip() for o in cors_origins_env.split(",") if o.strip()]
+    else:
+        origins = [
+            "http://localhost:3000",
+            "http://127.0.0.1:3000",
+            "https://khmerkit.sovandara.lol",
+        ]
+
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+        allow_origins=origins if origins != ["*"] else ["*"],
         allow_credentials=False,
-        allow_methods=["GET", "POST"],
+        allow_methods=["GET", "POST", "OPTIONS"],
         allow_headers=["*"],
     )
 
-    @app.get("/health")
-    def health() -> dict[str, object]:
-        return {"status": "ok", "documents": len(documents)}
+    @app.middleware("http")
+    async def log_requests(request: Request, call_next):
+        start_time = time.perf_counter()
+        response = await call_next(request)
+        duration_ms = (time.perf_counter() - start_time) * 1000
+        # Safe logging: log path, status, and duration without logging user text
+        logger.info(
+            "path=%s method=%s status=%d duration_ms=%.2f",
+            request.url.path,
+            request.method,
+            response.status_code,
+            duration_ms,
+        )
+        return response
+
+    @app.get("/health", response_model=HealthResponse)
+    @app.get("/v1/health", response_model=HealthResponse)
+    def health() -> HealthResponse:
+        return HealthResponse(
+            status="ok",
+            version=__version__,
+            documents=len(documents),
+            timestamp=datetime.now(timezone.utc).isoformat(),
+        )
 
     @app.post("/search", response_model=SearchResponse)
     def search(request: SearchRequest) -> SearchResponse:
@@ -107,7 +157,7 @@ def create_app(documents_path: Path = Path("data/real/documents.jsonl")) -> Fast
             normalized_text=normalized,
             changed=normalized != request.text,
             profile=request.profile,
-            engine_version="0.1.0",
+            engine_version=__version__,
             processing_time_ms=round((time.perf_counter() - started) * 1000, 3),
         )
 
@@ -147,7 +197,7 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Run the KhmerKit search API")
     parser.add_argument("--documents", type=Path, default=Path("data/real/documents.jsonl"))
-    parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=8000)
     args = parser.parse_args()
     uvicorn.run(create_app(args.documents), host=args.host, port=args.port)

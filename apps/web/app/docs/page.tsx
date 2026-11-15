@@ -2,16 +2,16 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Header } from "../../components/Header";
-import { CodeBlock } from "../../components/CodeBlock";
-import { SectionHeading } from "../../components/SectionHeading";
+import { Header } from "@/components/Header";
+import { CodeBlock } from "@/components/CodeBlock";
+import { SectionHeading } from "@/components/SectionHeading";
 
 export default function DocsPage() {
   const [activeSection, setActiveSection] = useState("quickstart");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["quickstart", "normalization", "search", "api-reference"];
+      const sections = ["quickstart", "normalization", "search", "api-reference", "deployment"];
       const scrollPos = window.scrollY + 120;
 
       for (const sectionId of sections) {
@@ -46,25 +46,26 @@ export default function DocsPage() {
     }
   };
 
-  const quickstartBash = `# 1. Install KhmerKit with development dependencies
+  const quickstartBash = `# 1. Install KhmerKit in development mode
+git clone https://github.com/sovandara1607/khmerKit.git
+cd khmerKit
 python3 -m pip install -e '.[dev]'
 
 # 2. Run unit test suite
-pytest
+pytest -v
 
 # 3. Query the local starter corpus via CLI
 khmerkit-search --documents data/real/documents.jsonl --query "រាជធានីរបស់កម្ពុជា"`;
 
-  const normalizePython = `from khmerkit.normalize import normalize_text
+  const normalizePython = `from khmerkit import normalize_text
 
 # Normalizes character order, diacritics, and Unicode canonical forms
-result = normalize_text("ខែ្មរ", profile="khmer")
+result = normalize_text("ខែ្មរ")
 
 print("Normalized text:", result.text)
-print("Was modified:", result.changed)
-print("Execution time:", f"{result.processing_time_ms:.2f} ms")`;
+print("Modified by pheasa:", result.used_pheasa)`;
 
-  const searchPython = `from khmerkit.search import SearchIndex
+  const searchPython = `from khmerkit import SearchIndex
 
 documents = [
     ("doc-1", "ភ្នំពេញ គឺជារាជធានីនិងទីក្រុងធំបំផុតនៃប្រទេសកម្ពុជា។"),
@@ -77,7 +78,14 @@ index = SearchIndex(documents)
 results = index.search("រាជធានីរបស់កម្ពុជា", k=3)
 
 for match in results:
-    print(f"[{match.document_id}] score={match.score:.4f}: {match.passage}")`;
+    print(f"[{match.doc_id}] score={match.score:.4f}")`;
+
+  const curlNormalize = `curl http://localhost:8000/v1/text/normalize \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "text": "សួស្តី   ពិភពលោក",
+    "profile": "khmer"
+  }'`;
 
   const curlApi = `curl http://localhost:8000/v1/search/query \\
   -H "Content-Type: application/json" \\
@@ -86,6 +94,14 @@ for match in results:
     "method": "char_tfidf",
     "top_k": 3
   }'`;
+
+  const dockerBash = `# Option A: Run the unified full stack with Docker Compose
+docker compose up -d
+
+# Option B: Run the web application standalone
+cd apps/web
+npm run build
+npm run start`;
 
   return (
     <div className="landing-page-root">
@@ -127,6 +143,13 @@ for match in results:
                 onClick={(e) => handleSidebarClick(e, "api-reference")}
               >
                 REST API Service
+              </a>
+              <a
+                className={`sidebar-link ${activeSection === "deployment" ? "active" : ""}`}
+                href="#deployment"
+                onClick={(e) => handleSidebarClick(e, "deployment")}
+              >
+                Deployment & Docker
               </a>
             </div>
 
@@ -208,7 +231,7 @@ for match in results:
               <SectionHeading
                 id="api-reference"
                 tag="04 · REST API REFERENCE"
-                title="Local FastAPI Service"
+                title="FastAPI Endpoints"
               />
               <p>
                 Start the local API service from your repository root with <code>khmerkit-api --documents data/real/documents.jsonl --port 8000</code>.
@@ -216,13 +239,42 @@ for match in results:
 
               <div className="endpoint-card">
                 <div className="endpoint-badge post">POST</div>
+                <code className="endpoint-path">/v1/text/normalize</code>
+              </div>
+
+              <CodeBlock
+                title="NORMALIZATION REQUEST"
+                language="CURL"
+                code={curlNormalize}
+              />
+
+              <div className="endpoint-card" style={{ marginTop: "24px" }}>
+                <div className="endpoint-badge post">POST</div>
                 <code className="endpoint-path">/v1/search/query</code>
               </div>
 
               <CodeBlock
-                title="REQUEST EXAMPLE"
+                title="SEARCH QUERY REQUEST"
                 language="CURL"
                 code={curlApi}
+              />
+            </section>
+
+            {/* Section 5: Deployment */}
+            <section className="docs-section">
+              <SectionHeading
+                id="deployment"
+                tag="05 · DEPLOYMENT"
+                title="Docker & Production Hosting"
+              />
+              <p>
+                KhmerKit supports standalone container deployments, Docker Compose, and Dokploy. The web application includes built-in same-origin proxying for production environments.
+              </p>
+
+              <CodeBlock
+                title="CONTAINER ORCHESTRATION"
+                language="BASH"
+                code={dockerBash}
               />
             </section>
           </article>

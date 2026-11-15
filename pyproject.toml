@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "khmerkit"
-version = "0.1.0"
-description = "Small, reproducible Khmer text normalization and search experiments"
+version = "0.1.1"
+description = "Open-source Khmer text normalization, document search, and evaluation toolkit"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
