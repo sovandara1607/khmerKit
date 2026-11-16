@@ -8,12 +8,26 @@ export function Header({ landing = false }: { landing?: boolean }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    setDark(window.localStorage.getItem("khmerkit-theme-v2") !== "light");
+    const saved = window.localStorage.getItem("khmerkit-theme-v2");
+    setDark(saved !== "light");
   }, []);
 
   useEffect(() => {
-    document.body.classList.toggle("dark", dark);
-    window.localStorage.setItem("khmerkit-theme-v2", dark ? "dark" : "light");
+    if (dark) {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+      document.documentElement.setAttribute("data-theme", "dark");
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+      window.localStorage.setItem("khmerkit-theme-v2", "dark");
+    } else {
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
+      document.documentElement.setAttribute("data-theme", "light");
+      document.body.classList.add("light");
+      document.body.classList.remove("dark");
+      window.localStorage.setItem("khmerkit-theme-v2", "light");
+    }
   }, [dark]);
 
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -95,15 +109,15 @@ export function Header({ landing = false }: { landing?: boolean }) {
               GitHub
             </a>
           )}
-          {!landing && (
-            <button
-              className="theme-toggle"
-              type="button"
-              onClick={() => setDark((value) => !value)}
-            >
-              {dark ? "Light" : "Dark"}
-            </button>
-          )}
+          <button
+            className="theme-toggle"
+            type="button"
+            aria-label={`Switch to ${dark ? "light" : "dark"} mode`}
+            title={`Switch to ${dark ? "light" : "dark"} mode`}
+            onClick={() => setDark((value) => !value)}
+          >
+            {dark ? "Light" : "Dark"}
+          </button>
         </div>
 
         {/* Mobile Hamburger Button */}
